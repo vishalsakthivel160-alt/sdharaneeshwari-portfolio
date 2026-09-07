@@ -22,8 +22,9 @@ function Contact() {
     setStatusMsg(null);
 
     try {
-      // Backend URL (handles environment or localhost port 5000 fallback)
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      // Backend API URL (supports VITE_API_URL, REACT_APP_BACKEND_URL, or relative /api/contact)
+      const backendUrl = (typeof process !== 'undefined' && process.env && (process.env.VITE_API_URL || process.env.REACT_APP_BACKEND_URL)) || '';
+
       
       const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
