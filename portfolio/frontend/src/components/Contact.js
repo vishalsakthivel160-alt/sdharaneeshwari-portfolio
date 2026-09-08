@@ -22,10 +22,10 @@ function Contact() {
     setStatusMsg(null);
 
     try {
-      // Backend API URL (supports VITE_API_URL, REACT_APP_BACKEND_URL, or relative /api/contact)
-      const backendUrl = (typeof process !== 'undefined' && process.env && (process.env.VITE_API_URL || process.env.REACT_APP_BACKEND_URL)) || '';
+      // Backend API URL (supports VITE_API_URL, REACT_APP_VITE_API_URL, or REACT_APP_BACKEND_URL)
+      const rawBackendUrl = (typeof process !== 'undefined' && process.env && (process.env.VITE_API_URL || process.env.REACT_APP_VITE_API_URL || process.env.REACT_APP_BACKEND_URL)) || '';
+      const backendUrl = rawBackendUrl.replace(/\/+$/, '');
 
-      
       const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: {
