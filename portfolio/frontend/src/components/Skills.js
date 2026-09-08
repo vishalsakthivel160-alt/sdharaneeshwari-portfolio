@@ -4,14 +4,14 @@ import { skillsData } from '../data/skillsData';
 function Skills() {
   return (
     <section id="skills" className="section-container">
-      <div className="section-header">
+      <div className="section-header reveal-on-scroll">
         <h2 className="section-title">Skills & Capabilities</h2>
         <p className="section-subtitle">Core technical competencies and development tools</p>
       </div>
 
       <div className="skills-grid">
         {skillsData.map((categoryGroup, index) => (
-          <div key={index} className="skill-category-card">
+          <div key={index} className={`skill-category-card reveal-on-scroll delay-${(index % 4) + 1}`}>
             <h3 className="skill-category-title">
               {categoryGroup.category}
             </h3>

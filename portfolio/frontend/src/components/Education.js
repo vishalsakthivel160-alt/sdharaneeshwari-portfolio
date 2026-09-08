@@ -3,12 +3,12 @@ import React from 'react';
 function Education() {
   return (
     <section id="education" className="section-container">
-      <div className="section-header">
+      <div className="section-header reveal-on-scroll">
         <h2 className="section-title">Education</h2>
         <p className="section-subtitle">Academic background and pursuing degree</p>
       </div>
 
-      <div className="education-card">
+      <div className="education-card reveal-on-scroll delay-1">
         <div className="edu-header">
           <div>
             <h3 className="edu-degree">Computer Science Engineering</h3>

@@ -8,13 +8,13 @@ function Projects() {
 
   return (
     <section id="projects" className="section-container">
-      <div className="section-header">
+      <div className="section-header reveal-on-scroll">
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">Academic and software development project</p>
       </div>
 
       <div className="projects-container">
-        <div className="project-card">
+        <div className="project-card reveal-on-scroll delay-1">
           <span className="project-badge">Academic Project</span>
           <h3 className="project-title">Teacher Period Assistant</h3>
           

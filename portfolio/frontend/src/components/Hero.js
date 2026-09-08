@@ -17,20 +17,24 @@ function Hero() {
 
       <div className="hero-container">
         <div className="hero-content">
-          <div className="status-badge">
+          <div className="status-badge reveal-on-scroll">
             <span className="status-dot"></span>
             <span>Open for Freelancing</span>
           </div>
 
-          <p className="hero-greeting">Hi, I'm S. Dharaneeshwari</p>
-          <h1 className="hero-name">S. Dharaneeshwari</h1>
-          <h2 className="hero-title">Computer Science Engineering Student</h2>
+          <p className="hero-greeting reveal-on-scroll delay-1">Hi, I'm S. Dharaneeshwari</p>
+          <h1 className="hero-name reveal-on-scroll delay-1">S. Dharaneeshwari</h1>
+          <h2 className="hero-title reveal-on-scroll delay-2">Computer Science Engineering Student</h2>
           
-          <p className="hero-intro">
+          <p className="hero-intro reveal-on-scroll delay-2">
             Passionate about technology, programming and building meaningful digital solutions.
           </p>
 
-          <div className="hero-buttons">
+          <p className="hero-subintro reveal-on-scroll delay-3">
+            Dedicated to developing clean, efficient web applications and expanding my software engineering expertise.
+          </p>
+
+          <div className="hero-buttons reveal-on-scroll delay-3">
             <button 
               className="btn-primary"
               onClick={() => scrollToSection('projects')}
@@ -46,7 +50,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="profile-photo-wrapper">
+        <div className="profile-photo-wrapper reveal-on-scroll delay-2">
           {!imgError ? (
             <img 
               src="/profile.jpg" 

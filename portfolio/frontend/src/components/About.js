@@ -3,13 +3,13 @@ import React from 'react';
 function About() {
   return (
     <section id="about" className="section-container">
-      <div className="section-header">
+      <div className="section-header reveal-on-scroll">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">Get to know my background, passion, and availability</p>
       </div>
 
       <div className="about-grid">
-        <div className="about-card">
+        <div className="about-card reveal-on-scroll delay-1">
           <p className="about-text">
             I am S. Dharaneeshwari, a Computer Science Engineering student at Christian College of Engineering and Technology, Dindigul. I am passionate about technology, programming, and developing practical solutions that can make everyday tasks easier and more efficient.
           </p>

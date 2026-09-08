@@ -63,13 +63,13 @@ function Contact() {
 
   return (
     <section id="contact" className="section-container">
-      <div className="section-header">
+      <div className="section-header reveal-on-scroll">
         <h2 className="section-title">Contact Me</h2>
         <p className="section-subtitle">Get in touch for freelancing opportunities or inquiries</p>
       </div>
 
       <div className="contact-grid">
-        <div className="contact-info-card">
+        <div className="contact-info-card reveal-on-scroll delay-1">
           <div>
             <h3 className="contact-person-name">S. Dharaneeshwari</h3>
             <p className="contact-person-role">Computer Science Engineering Student</p>
@@ -108,7 +108,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="contact-form-card">
+        <div className="contact-form-card reveal-on-scroll delay-2">
           {statusMsg && (
             <div className={`toast-msg ${statusMsg.type}`}>
               {statusMsg.text}
