@@ -46,7 +46,7 @@ function Contact() {
       console.error('Contact form submission error:', err);
       setStatusMsg({ 
         type: 'error', 
-        text: 'Unable to connect to the backend server. Please make sure the backend is running.' 
+        text: err.message ? `Connection error: ${err.message}` : 'Unable to connect to the contact API server.' 
       });
     } finally {
       setLoading(false);
