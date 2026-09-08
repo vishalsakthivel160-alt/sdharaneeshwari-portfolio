@@ -20,12 +20,34 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'Portfolio Backend API is running' });
+});
+
 // API Routes
 app.use('/api/contact', contactRoutes);
 
 // Basic health check route
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Catch-all 404 JSON handler
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: `Route not found: ${req.method} ${req.originalUrl}`
+  });
+});
+
+// Global 500 JSON error handler
+app.use((err, req, res, next) => {
+  console.error('Unhandled server error:', err);
+  res.status(500).json({
+    success: false,
+    message: err.message || 'Internal server error'
+  });
 });
 
 app.listen(PORT, () => {

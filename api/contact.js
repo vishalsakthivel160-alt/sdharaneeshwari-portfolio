@@ -91,7 +91,8 @@ async function sendContactEmail({ name, email, subject, message }) {
 }
 
 module.exports = async (req, res) => {
-  // Set CORS headers
+  // Set CORS and Content-Type headers
+  res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');

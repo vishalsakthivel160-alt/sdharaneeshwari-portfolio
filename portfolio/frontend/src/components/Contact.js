@@ -34,7 +34,15 @@ function Contact() {
         body: JSON.stringify(formData)
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get('content-type') || '';
+      let data;
+      if (contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response received from server:', text);
+        throw new Error('Server returned an invalid response format (HTML instead of JSON). Please verify that VITE_API_URL is set to your backend URL.');
+      }
 
       if (response.ok && data.success) {
         setStatusMsg({ type: 'success', text: data.message || 'Message sent successfully!' });
@@ -46,7 +54,7 @@ function Contact() {
       console.error('Contact form submission error:', err);
       setStatusMsg({ 
         type: 'error', 
-        text: err.message ? `Connection error: ${err.message}` : 'Unable to connect to the contact API server.' 
+        text: err.message || 'Unable to connect to the contact API server.' 
       });
     } finally {
       setLoading(false);
