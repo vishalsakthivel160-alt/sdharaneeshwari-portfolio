@@ -18,7 +18,7 @@ function Education() {
         </div>
 
         <div className="edu-location">
-          📍 Dindigul, Tamil Nadu, India
+          📍 Oddanchatram, Tamil Nadu, India
         </div>
 
         <div className="edu-status">

@@ -16,7 +16,7 @@ function Resume() {
             rel="noopener noreferrer" 
             className="btn-primary"
           >
-            👁️ View Resume
+            View Resume
           </a>
 
           <a 
@@ -24,7 +24,7 @@ function Resume() {
             download="S_Dharaneeshwari_Resume.pdf"
             className="btn-secondary"
           >
-            📥 Download Resume
+            Download Resume
           </a>
         </div>
       </div>

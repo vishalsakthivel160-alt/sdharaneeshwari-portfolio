@@ -22,7 +22,7 @@ function Hero() {
             <span>Open for Freelancing</span>
           </div>
 
-          <p className="hero-greeting reveal-on-scroll delay-1">Hi, I'm S. Dharaneeshwari</p>
+          <p className="hero-greeting reveal-on-scroll delay-1">Hi, I'm</p>
           <h1 className="hero-name reveal-on-scroll delay-1">S. Dharaneeshwari</h1>
           <h2 className="hero-title reveal-on-scroll delay-2">Computer Science Engineering Student</h2>
           
